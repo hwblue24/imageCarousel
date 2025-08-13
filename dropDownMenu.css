@@ -1,0 +1,23 @@
+.menu * {
+    display:none;
+
+}
+
+div.menu {
+    background: bisque;
+    display: inline-block;
+    padding:15px;
+    font-size: larger;
+    color:rgb(131, 128, 128);
+    font-weight: 300;
+}
+
+.red,
+.blue,
+.green {
+    padding:10px;
+}
+
+body {
+    background:rgb(111, 108, 250);
+}
