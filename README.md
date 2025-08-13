@@ -1,1 +1,1 @@
-Build a dropdown menu using js. 
+Build an image carousel using js.
