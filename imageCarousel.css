@@ -1,6 +1,8 @@
 body {
+    height:100vh;
     display:flex;
     justify-content: center;
+    align-items: center;
 
 }
 
@@ -12,17 +14,42 @@ body {
     border-style: solid;
     border-width: 5px;
     height: 300px; 
-    width:300px;
+    width:400px;
 
 }
 
 .slides {
+    display:flex;
+    justify-content: center;
+    align-items: center;
     flex-shrink:0;
     min-width: 0;
     border-color: red;
     border-style: solid;
-    border-width: 5px;
-    height: 300px; 
-    width:500px;
+    border-width: 3px;
+    height: 100%; 
+    width:200%;
     
+}
+
+ul {
+    display:flex;
+    align-items: center;
+    border-color:green;
+    border-style:solid;
+    height:100%;
+    width:100%;
+    border-width:2px;
+    
+}
+
+li { 
+    flex:1;
+    list-style-type: none;
+    
+}
+
+img {
+    width:100px;
+    height:100px;
 }
