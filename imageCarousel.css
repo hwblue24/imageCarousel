@@ -21,10 +21,13 @@ body {
 }
 
 .navigation { 
-    height: 100px; 
+    height: 50px; 
     width:800px;
     border-color: orange;
-     border-style: solid;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }   
 
@@ -50,12 +53,16 @@ body {
     height:100%;
     width:100%;
     border-width:2px;
+    padding:0px;
 
 }
 
 li { 
     flex:1;
     list-style-type: none;
+
+    display:flex;
+    justify-content: center;
     
 }
 
@@ -69,3 +76,23 @@ img {
     width:100px;
     height:100px;
 }
+
+#navButtons {
+    display:flex;
+    padding:0px;
+    flex:1;
+
+}
+
+#navButtons > li {
+    display:flex;
+    justify-content: center;
+    
+}
+
+button {
+    border-radius: 10px;
+    
+}
+
+
