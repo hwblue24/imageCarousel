@@ -90,9 +90,13 @@ img {
     
 }
 
-button {
+.navDot {
     border-radius: 10px;
     
 }
 
 
+.navDot.active {
+    border-radius: 10px;
+    
+}
