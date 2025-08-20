@@ -10,11 +10,12 @@ function rotateCaroselLeft () {
     const watchList = document.getElementsByClassName("watchList");
     watches.appendChild(watchList[0])
     offSetCount-=1;
+    MapBtnsToWatches();
     console.log(offSetCount);
     if(offSetCount<-4) {
         offSetCount = 0;
     }
-    MapBtnsToWatches();
+    
 }
 
 //handles logic taking  last li and moves to front
@@ -23,12 +24,13 @@ function rotateCaroselRight () {
     const watches = document.querySelector("#watches")
     const watchList = document.getElementsByClassName("watchList");
     watches.prepend(watchList[4])
-    offSetCount+=1; 
+    offSetCount+=1;
+    MapBtnsToWatches(); 
     console.log(offSetCount)
     if(offSetCount>4) {
         offSetCount = 0;
     }
-    MapBtnsToWatches();
+    
 }
 
 
@@ -70,13 +72,14 @@ function offSetPositions (e) {
             rotateCaroselRight();
         }
     } else if (e.target.classList.contains("dot4")) {
-        rotateCaroselLeft();
+        for (let i = 0; i <3; i++) {
+            rotateCaroselRight();
+        }
     } else if (e.target.classList.contains("dot5")) {
-        for (let i = 0; i < 2; i++) {
-            rotateCaroselLeft();
+        for (let i = 0; i < 4; i++) {
+            rotateCaroselRight();
         }
     }
-        
 }
 
 function MapBtnsToWatches () {
