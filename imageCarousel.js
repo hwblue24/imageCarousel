@@ -1,7 +1,11 @@
+
+MapBtnsToWatches ()
+
 let offSetCount = 0;
 
 //handles logic taking first li and appending to end
 function rotateCaroselLeft () {
+    
     const watches = document.querySelector("#watches")
     const watchList = document.getElementsByClassName("watchList");
     watches.appendChild(watchList[0])
@@ -10,11 +14,12 @@ function rotateCaroselLeft () {
     if(offSetCount<-4) {
         offSetCount = 0;
     }
-    
+    MapBtnsToWatches();
 }
 
 //handles logic taking  last li and moves to front
 function rotateCaroselRight () {
+    
     const watches = document.querySelector("#watches")
     const watchList = document.getElementsByClassName("watchList");
     watches.prepend(watchList[4])
@@ -23,6 +28,7 @@ function rotateCaroselRight () {
     if(offSetCount>4) {
         offSetCount = 0;
     }
+    MapBtnsToWatches();
 }
 
 
@@ -54,7 +60,7 @@ function navDefaultPosition () {
         
 }
 
-function offSetPositions (e) {
+function offSetPositions (e) {    
     navDefaultPosition();
     console.log(offSetCount)
     if (e.target.classList.contains("dot2")) {
@@ -73,7 +79,36 @@ function offSetPositions (e) {
         
 }
 
+function MapBtnsToWatches () {
+    const watchList = document.getElementsByClassName("watchList");
+    const btns = document.querySelectorAll(".navDot");
+    btns.forEach(btn => btn.classList.remove("active"));
+
+    if (watchList[2].classList.contains("watch1")) {
+        const btn = document.querySelector(".dot1");
+        btn.classList.add("active")
+    } else if ((watchList[2].classList.contains("watch2"))) {
+        const btn = document.querySelector(".dot2");
+        btn.classList.add("active")
+    } else if ((watchList[2].classList.contains("watch3"))) {
+        const btn = document.querySelector(".dot3");
+        btn.classList.add("active")
+    } else if ((watchList[2].classList.contains("watch4"))) {
+        const btn = document.querySelector(".dot4");
+        btn.classList.add("active")
+    } else if ((watchList[2].classList.contains("watch5"))) {
+        const btn = document.querySelector(".dot5");
+        btn.classList.add("active")
+    }
+
+}
+
+
+
 const navButtons = document.querySelector("#navButtons")
-navButtons.addEventListener("click", navDefaultPosition)
 navButtons.addEventListener("click", offSetPositions)
-//caroselControls();
+
+
+
+
+caroselControls();
